@@ -9,7 +9,7 @@ function App( {handleLogout} ) {
   // Fetch Todo Data
   const fetchData = async () => {
     try {
-      const res = await fetch("http://localhost:7000/todolist");
+      const res = await fetch("https://task-todo-be-789q.onrender.com/todolist");
       const data = await res.json();
       settododata(data);
       console.log(data);
@@ -32,7 +32,7 @@ function App( {handleLogout} ) {
   // Delete Todo List
   const deletetodolist = async (prodid) => {
     try {
-      await fetch(`http://localhost:7000/todolist/${prodid}`, {
+      await fetch(`https://task-todo-be-789q.onrender.com/todolist/${prodid}`, {
         method: "DELETE",
       });
       settododata(tododata.filter(({ id }) => id !== prodid));
@@ -57,7 +57,7 @@ function App( {handleLogout} ) {
       status: false,
     };
     try {
-      const res = await fetch(`http://localhost:7000/todolist`, {
+      const res = await fetch(`https://task-todo-be-789q.onrender.com/todolist`, {
         method: "POST",
         body: JSON.stringify(tempdata),
         headers: {
@@ -79,7 +79,7 @@ function App( {handleLogout} ) {
   // Update Todo
   const updateproduct = async () => {
     try {
-      await fetch(`http://localhost:7000/todolist/${formdata.id}`, {
+      await fetch(`https://task-todo-be-789q.onrender.com/todolist/${formdata.id}`, {
         method: "PUT",
         body: JSON.stringify(formdata),
         headers: {
