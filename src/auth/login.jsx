@@ -37,16 +37,10 @@ const LoginForm = ({setIsAuthenticated}) => {
 
   return (
     <div className="container d-flex justify-content-center align-items-center  min-vh-100">
-      <div className="card" style={{ width: '24rem', borderColor: 'orange', borderWidth: '2px' }}>
+      <div className="card" style={{ width: '24rem', borderColor: 'blue', borderWidth: '2px' }}>
         <div className="card-body">
           <div className="text-center mb-4">
-            <div style={{ width: '100px', height: '100px', backgroundColor: 'white', margin: '0 auto' }}>
-              <img 
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO9xMAd-PgVcWAQTQLxBcSUexZYm_q5-foLUpUuVjEWcWDzdKf3RJisrhiZ6il0kZz1ps&usqp=CAU" 
-                alt="Image Description" 
-                style={{ width: '100px', height: '100px' }} 
-              />
-            </div>
+          <h5 className="card-title text-center mb-4" style={{ color: 'blue' }}>Login</h5>
           </div>
           <form onSubmit={handleSubmit}>
             <div className="mb-3">
@@ -73,8 +67,7 @@ const LoginForm = ({setIsAuthenticated}) => {
             </div>
             <button 
               type="submit" 
-              className="btn btn-primary w-100 mb-3" 
-              style={{ backgroundColor: 'orange', borderColor: 'orange' }}
+              className="btn btn-outline-primary w-100 mb-3" 
             >
               Login
             </button>

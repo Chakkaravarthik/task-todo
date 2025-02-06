@@ -41,9 +41,9 @@ const navigate = useNavigate();
 
   return (
     <div className="container d-flex justify-content-center align-items-center min-vh-100">
-      <div className="card" style={{ width: '24rem', borderColor: 'orange', borderWidth: '2px' }}>
+      <div className="card" style={{ width: '24rem', borderColor: 'blue', borderWidth: '2px' }}>
         <div className="card-body">
-          <h5 className="card-title text-center mb-4" style={{ color: 'orange' }}>Register</h5>
+          <h5 className="card-title text-center mb-4" style={{ color: 'blue' }}>Register</h5>
           { registerationsuccess ? (
             <div className="alert alert-success" role="alert">
               Registration successful!
@@ -62,7 +62,7 @@ const navigate = useNavigate();
               <label htmlFor="password" className="form-label">Password</label>
               <input name='password'type="password" className="form-control" id="password" placeholder="Create a password" />
             </div>
-            <button type="submit" onClick={handleSubmit} className="btn btn-primary w-100 mb-3" style={{ backgroundColor: 'orange', borderColor: 'orange' }}>
+            <button type="submit" onClick={handleSubmit} className="btn btn-primary w-100 mb-3" >
               Register
             </button>
             <button type="button" className="btn btn-link w-100" style={{ backgroundColor: 'grey', color: 'white' }}>

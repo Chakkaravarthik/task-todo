@@ -134,8 +134,8 @@ function Form({ handlesubmit, handlechange, formdata , handleLogout }) {
           <h4>My Todo</h4>
         </div>
         <form className="forminput" onSubmit={handlesubmit}>
-          <input
-            className="input1"
+          <input 
+            className="input1 shadow-lg p-2"
             name="taskname"
             type="text"
             placeholder="Todo Name"
@@ -143,17 +143,17 @@ function Form({ handlesubmit, handlechange, formdata , handleLogout }) {
             value={formdata.taskname || ""}
           />
           <input
-            className="input1"
+            className="input1 shadow-lg p-2"
             name="taskdescription"
             type="text"
             placeholder="Description"
             onChange={handlechange}
             value={formdata.taskdescription || ""}
           />
-          <button className="btn" type="submit">
+          <button className="btn btn-primary" type="submit">
             {formdata.id ? "Update Todo" : "Add Todo"}
           </button>
-          <a className="btn" onClick={handleLogout}>
+          <a className="btn btn-primary" onClick={handleLogout}>
             Logout
           </a>
         </form>

@@ -7,13 +7,13 @@ const TodoList = ({ id, taskname, taskdescription, status, deletetodolist, loadd
     const [btnstatus,setbtnstatus] = useState(status);
 
     return (
-        <div className="card1" key={id}>
+        <div className="card1 shadow-lg" key={id}>
             <h5 className="">{taskname}</h5>
             <p className="">{taskdescription}</p>
-            <p onClick={() => setbtnstatus(!btnstatus)} className={`btttn-${btnstatus}`}>{btnstatus ? `Completed ` : `Not completed`}</p>
+            <p onClick={() => setbtnstatus(!btnstatus)} className={`btn btn-primary`}>{btnstatus ? `Completed ` : `Not completed`}</p>
             <div className="bttn">
-                <a href="#" className="btn " onClick={() => loaddata(id)}>edit</a>
-                <a href="#" className="btn " onClick={() => deletetodolist(id)}>Delete</a>
+                <a href="#" className="btn btn-outline-primary" onClick={() => loaddata(id)}>Edit</a>
+                <a href="#" className="btn btn-outline-primary " onClick={() => deletetodolist(id)}>Delete</a>
             </div>
         </div>
     )
