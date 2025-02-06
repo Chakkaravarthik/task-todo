@@ -97,7 +97,7 @@ function App( {handleLogout} ) {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [tododata]);
 
   return (
     <>
